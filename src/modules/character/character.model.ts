@@ -1,10 +1,45 @@
+import { Model, DataTypes } from 'sequelize'
+import database from '../../core/database/db.module'
 
+export class Character extends Model {}
 
-export const CharacterModule = async (): Promise<void> {
-    try{
-
-    console.log('CharacterModule complited!')
-    } catch(e) {
-        throw new Error(`CharacterModule ERROR: ${e}`)
+Character.init({
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    status: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    specis: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    type: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    gender: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    url: {
+        type: DataTypes.STRING,
+        allowNull: false,
     }
-}
+
+},
+{
+    sequelize: database,
+    tableName: 'Characters'
+})

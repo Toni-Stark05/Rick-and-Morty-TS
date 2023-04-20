@@ -1,6 +1,6 @@
-import CharacterService from "./character.service"
+import CharacterService from './character.service'
 
-export const CharacterModule = async (): Promise<void> {
+export const CharacterModule = async (): Promise<void> => {
     try{
 
     console.log('CharacterModule complited!')
