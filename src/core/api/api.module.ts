@@ -5,7 +5,7 @@ import axios, {
 import * as dotenv from 'dotenv' 
 dotenv.config()
 
-const API_URL = process.env.API_URL
+const API_URL = process.env.API_URL || 'https://rickandmortyapi.com/api/'
 
 class Api {
     private api: AxiosInstance | null = null

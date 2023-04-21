@@ -1,7 +1,7 @@
 import { Model, DataTypes } from 'sequelize'
 import database from '../../core/database/db.module'
 
-export class Character extends Model {}
+class Character extends Model {}
 
 Character.init({
     id: {
@@ -17,7 +17,7 @@ Character.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    specis: {
+    species: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -43,3 +43,6 @@ Character.init({
     sequelize: database,
     tableName: 'Characters'
 })
+
+
+export default Character
