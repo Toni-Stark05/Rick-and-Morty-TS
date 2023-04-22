@@ -8,7 +8,7 @@ dotenv.config()
 const API_URL = process.env.API_URL || 'https://rickandmortyapi.com/api/'
 
 class Api {
-    private api: AxiosInstance | null = null
+    private readonly api: AxiosInstance | null = null
 
     constructor(){
         this.api = axios.create({ baseURL: API_URL })

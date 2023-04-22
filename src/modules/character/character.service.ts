@@ -3,7 +3,7 @@ import api from '../../core/api/api.module.js'
 import Character from "./character.model";
 
 class CharacterService {
-  async loadData(): Promise<void>{
+  async loadData(): Promise<void> {
     const data = await this.getResponse(1)
     if(data === null) throw new Error('Not Found')
     const pages = data.info.pages
